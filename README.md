@@ -6,5 +6,4 @@ _Функции бота:_
 
 Не открывайте файл JSON. Он весит так много, что будет открываться очень долго.
 
-![GitHub Logo](добрый бот.jpg)
-Format: ![Alt Text](url)
+![alt text](https://github.com/mtkp-tmp/PoliteBo/добрый-робот.jpg "Logo Title Text 1")
