@@ -6,4 +6,4 @@ _Функции бота:_
 
 Не открывайте файл JSON. Он весит так много, что будет открываться очень долго.
 
-![alt text](https://github.com/mtkp-tmp/PoliteBo/добрый-робот.jpg "Logo Title Text 1")
+![alt text](https://github.com/mtkp-tmp/PoliteBot/blob/master/Добрый-робот.jpg "Logo Title Text 1")
