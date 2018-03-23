@@ -4,7 +4,7 @@ import telebot
 import json
 import re
 
-token = "_your token_"
+token = "584405943:AAG2acubPunQmp2W2qHfndm0OVSZ7JbPy48"
 bot = telebot.TeleBot(token)
 
 
@@ -24,14 +24,16 @@ def compliment(message):
     bot.send_message(message.chat.id, 'Здравствуйте! Меня зовут Вежливый бот v 1.1!\n'
                  'Я создан, чтобы делать комплименты и банить грубиянов.\n'
                  'Меня создал @OdlinAlex как пример для ваших идей.\n'
-                 'Чтобы получить от меня комплимент просто напишите мне об этом!\n\n'
+                 'Чтобы получить от меня комплимент просто напишите мне об этом!\n'
+                 'Я живу по адресу: https://github.com/mtkp-tmp/PoliteBot\n\n'
                  'Новвоведения: \n- Бан за плохие слова')
 
     @bot.message_handler(func=lambda message: True, content_types=['text'])
     def compliment_or_ban(message):
-        nice_things = [', ты сегодня чудестно выглядишь!', ', у тебя все получится!',
-                       ', ты крут, бро!', ', продолжай в том же духе!', ', удачного дня!',
-                       ', твои глаза как бирюза!', ', тебя ждет успех!', ', ты супер!']
+        with open('compliment.json', 'r') as file:
+            a = json.load(file)
+            nice_things = [elem.get('fields').get('compliment') for elem in a]
+            file.close()
 
         if censor(message.text):
                 bot.send_message(message.chat.id, message.from_user.first_name+' ЗАБАНИН!1!')
